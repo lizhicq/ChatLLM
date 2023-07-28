@@ -98,3 +98,9 @@ $git submodule add https://github.com/facebookresearch/llama.git llama
 $git commit -m 'create project'
 $git remote add origin https://github.com/username/repository.git
 ```
+
+
+
+# Demo 
+![Prime Number](data/images/prime_number.png)
+[![Watch the video](data/images/prime_number.png)](https://youtu.be/hNso61xiTew)
