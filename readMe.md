@@ -102,5 +102,4 @@ $git remote add origin https://github.com/username/repository.git
 
 
 # Demo 
-![Prime Number](data/images/prime_number.png?raw=true)
-[![Watch the video](data/images/prime_number.png)](https://youtu.be/hNso61xiTew)
+![Demo](data/images/demo.png)
