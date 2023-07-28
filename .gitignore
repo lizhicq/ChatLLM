@@ -1,5 +1,6 @@
 # 忽略 /models/ 下所有以 llama 开头的文件夹 模型文件过于庞大
 models/llama*/
+llama.cpp/models/*
 .DS_Store
 /.build
 /Packages
