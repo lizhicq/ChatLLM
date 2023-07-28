@@ -14,8 +14,6 @@ The problem with large language models is that you can’t run these locally on 
 
 There are multiple steps involved in running LLaMA locally on a M1 Mac after downloading the model weights.
 
-
-
 You can see the different models are in a different directories. Now let's begin:
 
 ### Step 1: Install dependencies
@@ -76,12 +74,12 @@ $make
 ### Step 3: Convert llama2 models to ggml format
 
 ```
-$python convert-pth-to-ggml.py ../meta-models/llama-2-13b-chat 1
-$ ./quantize ../meta-models/llama-2-13b-chat/ggml-model-f16.bin ./models/13B-chat/ggml-model-q4_0.bin 2
+$python convert-pth-to-ggml.py ../models/llama-2-13b-chat 1
+$ ./quantize ../models/llama-2-13b-chat/ggml-model-f16.bin ../models/llama-2-13b-chat/ggml-model-q4_0.bin 2
 ```
 
 ## Step 4: Run the model
-$ ./main -m ./models/13B-chat/ggml-model-q4_0.bin \
+$ ./main -m ../models/llama-2-13b-chat/ggml-model-q4_0.bin \
         -t 8 \
         -n 128 \
         -p 'The first man on the moon was '
@@ -89,3 +87,14 @@ $ ./main -m ./models/13B-chat/ggml-model-q4_0.bin \
 
 # Notes:
 1. I ignore llama models as it is too large to store in git, please refer to step 1 to download and step 3 to compile those models 
+2. Add for submodule 
+```
+$git init
+$git submodule add https://github.com/ggerganov/llama.cpp.git llama.cpp
+$git submodule add https://github.com/facebookresearch/llama.git llama
+```
+3. Push to origin
+```
+$git commit -m 'create project'
+$git remote add origin https://github.com/username/repository.git
+```
