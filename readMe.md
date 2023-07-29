@@ -102,4 +102,4 @@ $git remote add origin https://github.com/username/repository.git
 
 
 # Demo 
-![Demo](data/images/demo.png)
+![Demo](data/image/demo.png)
